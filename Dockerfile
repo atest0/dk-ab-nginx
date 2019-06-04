@@ -28,12 +28,12 @@ RUN apt-get clean
 
 Add ngx.sh /ngx.sh
 Add ngx_make.sh /ngx_make.sh
-ADD auto_unix /auto_unix
 ADD run.sh /run.sh
 RUN chmod +x /*.sh
 
 SHELL ["/bin/bash", "-c"]
 RUN /ngx.sh
+ADD auto_unix /auto_unix
 RUN /ngx_make.sh
 
 
